@@ -47,7 +47,7 @@ public void setCompleted(boolean completed) {
 }
 @Override 
 public String toString() {
-	return String.format("%-15s %-15s %-15s %-15s \n", completed, dueDate, name, description); //"%s\t %s\t %s\t %s\t \n"
+	return String.format("%-15s %-15s %-15s %-15s\n", completed, dueDate, name, description); //"%s\t %s\t %s\t %s\t \n"
 	 
 }
 
