@@ -17,3 +17,5 @@ target/
 
 *.class
 /bin
+
+login.properties

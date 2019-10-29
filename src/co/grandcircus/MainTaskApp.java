@@ -1,5 +1,6 @@
 package co.grandcircus;
 
+import java.io.FileReader;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -7,6 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Properties;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -14,9 +16,17 @@ public class MainTaskApp {
 
 	public static void main(String[] args) {
 		Scanner scnr = new Scanner(System.in);
+		Properties login = new Properties();
+		try (FileReader in = new FileReader("login.properties")) {
+		    login.load(in);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		String user = login.getProperty("username");
+		String password = login.getProperty("password");
 		String url = "jdbc:mysql://localhost:3306/test";
-		String user = "root";
-		String password = "PureLife1";
+//		String user = "root";
+//		String password = "PureLife1";
 		boolean completed = false;
 		String name = "";
 		String description = "";
