@@ -25,8 +25,6 @@ public class MainTaskApp {
 		String user = login.getProperty("username");
 		String password = login.getProperty("password");
 		String url = "jdbc:mysql://localhost:3306/test";
-//		String user = "root";
-//		String password = "PureLife1";
 		boolean completed = false;
 		String name = "";
 		String description = "";
